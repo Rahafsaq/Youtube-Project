@@ -1,0 +1,369 @@
+// // import axios from 'axios';
+// // import React from 'react';
+// // function AllVideo() {
+// // 	const [allVideo, setAllVideo] = React.useState([]);
+// // 	const [video, setVideo] = React.useState([]);
+// // 	React.useEffect(() => {
+// // 		axios
+
+// // 			.get(
+// // 				'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI'
+// // 			)
+// // 			.then(function (response) {
+// // 				console.log(response.data.items);
+// // 				setAllVideo(response.data.items);
+// // 			});
+// // 	}, []);
+
+// // 	React.useEffect(() => {
+// // 		axios
+
+// // 			.get(
+// // 				'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI'
+// // 			)
+// // 			.then(function (response) {
+// // 				console.log(response.data.items);
+// // 				setVideo(response.data.items);
+// // 			});
+// // 	}, []);
+// // 	return (
+// // 		<div className='flex justify-center gap-6'>
+// // 			<div className='flex flex-col gap-2'>
+// // 				{allVideo.map((item) => (
+// // 					// <div key={item.etag}>
+// // 					// 	{/* <img src={item.snippet.thumbnails.default.url}></img> */}
+// // 					// 	<iframe width='420' height='315' src={`https://www.youtube.com/embed/${item.id}`}></iframe>
+
+// // 					// 	<p>{item.snippet.title}</p>
+// // 					// </div>
+// // 					<div key={item.etag} className='flex items-center gap-2'>
+// // 						<div className='text-right'>
+// // 							<p className='font-semibold w-[16vw]'>{item.snippet.title}</p>
+// // 							{/* <p className='text-gray-500'>hhkkkkkkkkkkkk</p> */}
+// // 							<div className='flex gap-2  justify-end'>
+// // 								<p>year</p>
+// // 								<p>watch</p>
+// // 								{/* <p>{item.contentDetails.contentRating.duration}</p> */}
+// // 							</div>
+// // 						</div>
+// // 						<div>
+// // 							<img src={item.snippet.thumbnails.default.url} className='w-[14vw] h-[16vh] rounded-lg' />
+// // 							{/* <iframe
+// // 							width='190'
+// // 							height='110'
+// // 							className='rounded-lg'
+// // 							src={`https://www.youtube.com/embed/${item.id}`}
+// // 						></iframe> */}
+// // 						</div>
+// // 					</div>
+// // 				))}
+// // 				{/* <p>{allVideo.title}</p> */}
+// // 			</div>
+// // 			<div>
+// // 				<iframe
+// // 					// width='190'
+// // 					// height='110'
+// // 					className='rounded-2xl w-[55vw] h-[65vh]'
+// // 					src={`https://www.youtube.com/embed/${video.id}`}
+// // 				></iframe>
+// // 				<p className='text-xl font-semibold'>lets make ideo</p>
+// // 			</div>
+// // 		</div>
+// // 	);
+// // }
+
+// // export default AllVideo;
+
+// // import axios from 'axios';
+// // import React, { useEffect, useState } from 'react';
+
+// // function AllVideo() {
+// // 	const [allVideo, setAllVideo] = useState([]);
+// // 	const [selectedVideo, setSelectedVideo] = useState(null);
+
+// // 	useEffect(() => {
+// // 		axios
+// // 			.get(
+// // 				'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI'
+// // 			)
+
+// // 			.then(function (response) {
+// // 				console.log(response.data.items);
+// // 				setAllVideo(response.data.items);
+// // 			})
+// // 			.catch(function (error) {
+// // 				console.error('Error fetching videos:', error);
+// // 			});
+// // 	}, []);
+
+// // 	const handleVideoClick = (videoId) => {
+// // 		setSelectedVideo(videoId);
+// // 	};
+
+// // 	return (
+// // 		<div className='flex justify-center gap-6'>
+// // 			<div className='flex flex-col gap-2'>
+// // 				{allVideo.map((item) => (
+// // 					<div key={item.etag} className='flex items-center gap-2' onClick={() => handleVideoClick(item.id)}>
+// // 						<div className='text-right'>
+// // 							<p className='font-semibold w-[16vw]'>{item.snippet.title}</p>
+// // 							<div className='flex gap-2  justify-end'>
+// // 								<p>year</p>
+// // 								<p>watch</p>
+// // 							</div>
+// // 						</div>
+// // 						<div>
+// // 							<img
+// // 								src={item.snippet.thumbnails.default.url}
+// // 								className='w-[14vw] h-[16vh] rounded-lg cursor-pointer'
+// // 								alt={item.snippet.title}
+// // 							/>
+// // 						</div>
+// // 					</div>
+// // 				))}
+// // 			</div>
+// // 			<div>
+// // 				{selectedVideo && (
+// // 					<>
+// // 						<iframe
+// // 							className='rounded-2xl w-[55vw] h-[65vh]'
+// // 							src={`https://www.youtube.com/embed/${selectedVideo}`}
+// // 							title='YouTube Video'
+// // 						></iframe>
+// // 						<p className='text-xl font-semibold'>Let's make video</p>
+// // 					</>
+// // 				)}
+// // 			</div>
+// // 		</div>
+// // 	);
+// // }
+
+// // export default AllVideo;
+
+// import axios from 'axios';
+// import { useEffect, useState } from 'react';
+// import Nav from './Nav';
+// function AllVideo() {
+// 	const [allVideo, setAllVideo] = useState([]);
+// 	const [selectedVideo, setSelectedVideo] = useState(null);
+
+// 	useEffect(() => {
+// 		axios
+// 			.get(
+// 				'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI'
+// 			)
+// 			.then(function (response) {
+// 				console.log(response.data.items);
+// 				setAllVideo(response.data.items);
+
+// 				// Set the first video as the selected video when the component mounts
+// 				if (response.data.items.length > 0) {
+// 					setSelectedVideo(response.data.items[0].id);
+// 				}
+// 			})
+// 			.catch(function (error) {
+// 				console.error('Error fetching videos:', error);
+// 			});
+// 	}, []);
+
+// 	const handleVideoClick = (id) => {
+// 		setSelectedVideo(id);
+// 	};
+// 	console.log(selectedVideo);
+// 	return (
+// 		<div>
+// 			<Nav />
+
+// 			<div className='flex  justify-center mt-8 gap-6'>
+// 				<div className='flex flex-col gap-2'>
+// 					<div className='border-2 rounded-xl h-[24vh]'>Rahaf linked in</div>
+
+// 					{allVideo.map((item) => (
+// 						<div
+// 							key={item.etag}
+// 							className='flex items-center gap-2'
+// 							onClick={() => handleVideoClick(item.id)}
+// 						>
+// 							<div className='text-right'>
+// 								<p className='font-semibold w-[16vw]'>{item.snippet.title}</p>
+// 								<div className='flex gap-2  justify-end'>
+// 									<p>Year</p>
+// 									<p>watch</p>
+// 								</div>
+// 							</div>
+// 							<div>
+// 								<img
+// 									src={item.snippet.thumbnails.default.url}
+// 									className={`w-[14vw] h-[16vh] rounded-lg cursor-pointer ${
+// 										item.id === selectedVideo ? 'border-2 border-stone-500' : ''
+// 									}`}
+// 									alt={item.snippet.title}
+// 								/>
+// 							</div>
+// 						</div>
+// 					))}
+// 				</div>
+// 				<div>
+// 					{selectedVideo && (
+// 						<>
+// 							<iframe
+// 								className='rounded-2xl w-[55vw] h-[65vh]'
+// 								src={`https://www.youtube.com/embed/${selectedVideo}`}
+// 								title='YouTube Video'
+// 							></iframe>
+// 							<p className='text-xl font-semibold'>{selectedVideo.title}</p>
+// 							<div className='text-xl font-semibold'>{selectedVideo.title}</div>
+// 							<button>
+// 								{/* start div for all buttons */}
+// 								<div className='flex gap-4'>
+// 									<button className='rounded-3xl flex justify-center items-center hover:bg-[#dcd8d8] h-[7vh] w-[8vw] border  p-1 bg-[#F8F8F8]'>
+// 										<i className='flex material-icons'>
+// 											<p>Share</p>
+// 											<span className='material-symbols-outlined'>switch_access_shortcut</span>
+// 										</i>
+// 									</button>
+// 									<div className='flex'>
+// 										<button className='rounded-l-3xl flex justify-center items-center hover:bg-[#dcd8d8] h-[7vh] w-[6vw] border  p-1 bg-[#F8F8F8]'>
+// 											<i className='material-icons'>
+// 												<span className='material-symbols-outlined'>thumb_down</span>
+// 											</i>
+// 										</button>
+// 										<button className='rounded-r-3xl flex justify-center items-center hover:bg-[#dcd8d8] h-[7vh] w-[6vw] border  p-1 bg-[#F8F8F8]'>
+// 											<i className='material-icons'>
+// 												<span className='material-symbols-outlined'>thumb_up</span>
+// 											</i>
+// 										</button>
+// 									</div>
+// 								</div>
+// 								{/* end div for all buttons */}
+// 							</button>
+// 						</>
+// 					)}
+// 				</div>
+// 			</div>
+// 		</div>
+// 	);
+// }
+
+// export default AllVideo;
+
+// // import axios from 'axios';
+// // import { useEffect, useState } from 'react';
+// // import Nav from './Nav';
+
+// // function AllVideo() {
+// // 	const [allVideo, setAllVideo] = useState([]);
+// // 	const [selectedVideo, setSelectedVideo] = useState(null);
+// // 	const [searchQuery, setSearchQuery] = useState('');
+
+// // 	useEffect(() => {
+// // 		// Fetch popular videos when the component mounts
+// // 		fetchPopularVideos();
+// // 	}, []);
+
+// // 	const fetchPopularVideos = () => {
+// // 		axios
+// // 			.get(
+// // 				'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI'
+// // 			)
+// // 			.then(function (response) {
+// // 				console.log(response.data.items);
+// // 				setAllVideo(response.data.items);
+
+// // 				// Set the first video as the selected video when the component mounts
+// // 				if (response.data.items.length > 0) {
+// // 					setSelectedVideo(response.data.items[0].id);
+// // 				}
+// // 			})
+// // 			.catch(function (error) {
+// // 				console.error('Error fetching popular videos:', error);
+// // 			});
+// // 	};
+
+// // 	const handleVideoClick = (videoId) => {
+// // 		setSelectedVideo(videoId);
+// // 	};
+
+// // 	const handleSearch = () => {
+// // 		// Fetch videos based on the search query
+// // 		axios
+// // 			.get(
+// // 				`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchQuery}&type=video&key=AIzaSyDRmlB4PD_S7vCRajSy4WxpiXnhbtiLMUI`
+// // 			)
+// // 			.then(function (response) {
+// // 				console.log(response.data.items);
+// // 				setAllVideo(response.data.items);
+
+// // 				// Set the first video as the selected video for the search results
+// // 				if (response.data.items.length > 0) {
+// // 					setSelectedVideo(response.data.items[0].id.videoId);
+// // 				}
+// // 			})
+// // 			.catch(function (error) {
+// // 				console.error('Error fetching search results:', error);
+// // 			});
+// // 	};
+
+// // 	return (
+// // 		<div>
+// // 			<Nav />
+// // 			<div className='flex justify-center mt-8 gap-6'>
+// // 				<div className='flex flex-col gap-2'>
+// // 					{/* Search input */}
+// // 					<div className='mb-4'>
+// // 						<input
+// // 							type='text'
+// // 							value={searchQuery}
+// // 							onChange={(e) => setSearchQuery(e.target.value)}
+// // 							placeholder='Search for videos...'
+// // 							className='border p-2 rounded'
+// // 						/>
+// // 						<button onClick={handleSearch} className='ml-2 p-2 bg-gray-300 rounded'>
+// // 							Search
+// // 						</button>
+// // 					</div>
+
+// // 					{/* Video list */}
+// // 					{allVideo.map((item) => (
+// // 						<div
+// // 							key={item.etag}
+// // 							className='flex items-center gap-2'
+// // 							onClick={() => handleVideoClick(item.id.videoId)}
+// // 						>
+// // 							<div className='text-right'>
+// // 								<p className='font-semibold w-[16vw]'>{item.snippet.title}</p>
+// // 								<div className='flex gap-2  justify-end'>
+// // 									<p>Year</p>
+// // 									<p>watch</p>
+// // 								</div>
+// // 							</div>
+// // 							<div>
+// // 								<img
+// // 									src={item.snippet.thumbnails.default.url}
+// // 									className={`w-[14vw] h-[16vh] rounded-lg cursor-pointer ${
+// // 										item.id.videoId === selectedVideo ? 'border-2 border-blue-500' : ''
+// // 									}`}
+// // 									alt={item.snippet.title}
+// // 								/>
+// // 							</div>
+// // 						</div>
+// // 					))}
+// // 				</div>
+// // 				<div>
+// // 					{selectedVideo && (
+// // 						<>
+// // 							<iframe
+// // 								className='rounded-2xl w-[55vw] h-[65vh]'
+// // 								src={`https://www.youtube.com/embed/${selectedVideo}`}
+// // 								title='YouTube Video'
+// // 							></iframe>
+// // 							<p className='text-xl font-semibold'>Let's make video</p>
+// // 						</>
+// // 					)}
+// // 				</div>
+// // 			</div>
+// // 		</div>
+// // 	);
+// // }
+
+// // export default AllVideo;
